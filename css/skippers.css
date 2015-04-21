@@ -1,0 +1,324 @@
+/* Written by Andrew Zacharias */
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-image: url(../images/bgpattern2.png); /* bg adopted from subtlepatterns.com */
+    font-family: Lato, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: PT Serif, Times, sans-serif;
+    font-weight: 700;
+}
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+nav {
+    display:block;
+    height: 100px;
+    width: 100%;
+}
+
+#navBar {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: #423D37;
+    margin-top: 50px;
+}
+
+#stamplogo {
+    display:inline-block;
+    position: relative;
+    top: -50px;
+    z-index: 2;
+}
+
+#stamplogo img {
+    max-width:100%;
+}
+
+#topNav {
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#navMenu {
+    vertical-align: top;
+}
+#navMenu ul {
+    margin: 0;
+    padding: 0;
+}
+#navMenu li {
+    list-style: none;
+    display: inline-block;
+}
+
+#navMenu li a {
+    display: inline-block;
+    font-size: 24px;
+    color: #D8C7B2;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#navMenu li a:hover {
+    background: #625D57;
+    color: #97AF34;
+}
+
+#navMenu {
+    display: inline-block;
+}
+#navMenu > * {
+    display: inline-block;
+}
+
+#navMenu a.active {
+    background: #554f47;
+    color: #97AF34;
+}
+
+#menuButton {
+    display: none;
+}
+
+.mainContentArea {
+    max-width: 1100px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    background: #f1e7da;
+}
+
+.mainContent {
+    overflow: hidden;
+    padding: 20px 40px;
+}
+
+.mainContent img {
+    border: 1px solid #423D37;
+}
+
+.pagePhoto {
+    position: relative;
+    width: 100%;
+    top: -50px;
+    margin-bottom: -50px;
+    z-index: 1;
+}
+
+
+/* FOOTER */
+footer {
+    margin: 0;
+    width: 100%;
+    min-height: 100px;
+    background: #423D37;
+}
+
+#footerContent {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#footerLeft {
+    width: 39%;
+    min-width: 200px;
+    display: inline-block;
+
+}
+
+#footerLeft li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 2% 5%;
+}
+
+#footerLeft a{
+    color: white;
+}
+
+#footerCenter {
+    width: 19%;
+    min-width: 60px;
+    display: inline-block;
+}
+
+#footerRight {
+    width: 39%;
+    min-width: 200px;
+    display: inline-block;
+}
+
+#footerRight img {
+    max-width: 100%;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+/* GRID SYSTEM */
+/* Adapted from code at https://css-tricks.com/dont-overthink-it-grids/ */
+
+.col-1-3 {
+    width: 33%;
+}
+
+.col-2-3 {
+    width: 66%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-1 {
+    width: 100%;
+}
+
+[class*='col-'] {
+    display: inline-block;
+    vertical-align: top;
+}
+
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.events {
+    background: #dec0ab;
+    padding: 10px;
+}
+
+/* Break point for smaller screens. */
+/* Makes nav menu smaller. Reduces to one column layout */
+@media screen and (max-width: 800px) {
+    [class*='col-'] {
+        width: 100%;
+    }
+
+    #navMenu li a {
+    padding: 11px 10px;
+    }
+}
+
+/* Break point for phone sized screens */
+/* Replaces nav menu with hamburger drop down. Reduces padding in other places */
+@media screen and (max-width: 639px) {
+
+    #navBar {
+        height: 100px;
+        margin-top: 0px;
+    }
+    .pagePhoto {
+        position: relative;
+        width: 100%;
+        top: 0;
+        margin-bottom: 0;
+    }
+    #stamplogo {
+        top: 0;
+        max-width: 35%;
+    }
+    
+
+    #navMenu {
+        width: 64%;
+        overflow: hidden;
+    }
+
+    #navMenu ul {
+        /*max-width: 300px;*/
+    }
+    #navMenu li {
+        width: 30%;
+    } 
+    #navMenu li a {
+        padding: 11px 20px;
+    }
+
+    /* Reduce padding on sides */
+    .mainContent {
+    padding: 20px 20px;
+    }
+
+    /* FOOTER rearranged for mobile */
+    #footerRight {
+        width: 70%;
+    }
+    #footerLeft {
+        width: 100%;
+    }
+    #footerLeft li {
+        padding: 2%;
+    }
+    #footerCenter {
+        width: 29%;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    #menuButton {
+        color: white;
+        display: block;
+        height: 100%;
+        width: 100%;
+        /*max-width: 150px;*/
+        background: #823732;
+        padding: 10px;
+        padding-left: 30px;
+        display: inline-block;
+        /*float: right;*/
+        font-size: 24px;
+        text-decoration: none;
+        /*border-radius: 10px;*/
+    }
+    #menuButton img {
+        max-width: 50%;
+        float:right;
+    }
+
+    #navMenu ul li {
+        display:none;
+    }
+    #navMenu.expanded ul {
+        max-width: 100%;
+    }
+    #navMenu.expanded ul li {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        background: #423D37;
+    }
+
+    #navMenu.expanded ul li a {
+        width: 100%;
+    }
+
+
+}
