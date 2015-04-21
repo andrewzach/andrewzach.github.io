@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
     <title>Skippers Creek Vineyard - Contact Us</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skippers.css">
@@ -31,10 +31,10 @@
 
     </nav>
     <div class="mainContentArea">
-        <img class="pagePhoto" src="images/bottletable_banner.jpg">
+        <img class="pagePhoto" src="images/contact_banner.jpg">
         <div class="mainContent">
             <div class="col-1-2">
-                <h1>Contact Information</h1>
+                <h2>Contact Information</h2>
                 <p><b>Address:</b> <br>
                 Skippers Creek Vineyard <br>
                 965 Rocky Ford Rd <br>
@@ -46,10 +46,19 @@
 
                 <p><b>Phone Number:</b> 804-598-7291</p>
             </div>
-            <div class="col-1-2">
+            <div class="col-1-2 contactUs">
+                <h2>Send Us A Message</h2>
+                <form class="contactForm">
+                    <label for="name">Name</label><input type="text" name="name" required>
+                    <label for="email">Email</label><input type="email" name="email" required>
+                    <label for="message">Message</label><textarea name="message" required rows="7"></textarea><br>
+                    <input class="submit" type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="col-1-1">
                 <!-- Disclosure: the code for this iframe is similar to the original skipperscreekvineyard.com website. However, I'm the original author of that piece of code as well so it is my own work. -->
-                <div class="responiveIframe">
-                    <iframe id="googleMap" width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Skippers+Creek+Vineyard+Powhatan,+VA+23139&sll=37.471214,-77.883196&sspn=4.613303,10.821533&ie=UTF8&hq=&near=965+Rocky+Ford+Rd,+Powhatan,+Virginia+23139&t=h&ll=37.471214,-77.883196&spn=0.02466,0.084972&z=14&iwloc=A&output=embed" style="margin-bottom: 30px; border: #423d35 6px solid;">
+                <div class="responsiveIframe">
+                    <iframe id="googleMap" width="900" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&hl=en&geocode=&q=Skippers+Creek+Vineyard+Powhatan,+VA+23139&sll=37.471214,-77.883196&ie=UTF8&near=965+Rocky+Ford+Rd,+Powhatan,+Virginia+23139&t=m&ll=37.471214,-77.883196&spn=0.02466,0.084972&z=13&iwloc=A&output=embed">
                     </iframe>
                 </div>
             </div>
@@ -67,7 +76,8 @@
                 </ul>
             </div>
             <div id="footerCenter">
-                <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780"><img src="images/FBlogo58.png" width="58" height="58" class="centered"></a>
+                <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780"><img src="images/FBlogo58.png"></a>
+                <a href="https://twitter.com/skipperscreek"><img src="images/Twitter_logo_blue.png"></a>
             </div>
             <div id="footerRight">
                 <img src="images/skipperscreek-footerlogo.png" class="centered">

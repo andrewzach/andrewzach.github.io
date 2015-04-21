@@ -7,9 +7,14 @@ html {
     box-sizing: inherit;
 }
 body {
+    background: #e8d7c2; /* in case background image doesn't load */
     background-image: url(../images/bgpattern2.png); /* bg adopted from subtlepatterns.com */
     font-family: Lato, Verdana, sans-serif;
     font-size: 18px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: #3f3b35;;
 }
 
 p {
@@ -46,7 +51,7 @@ nav {
     display: block;
     height: 50px;
     width: 100%;
-    background: #423D37;
+    background: #3f3b35;
     margin-top: 50px;
 }
 
@@ -113,7 +118,7 @@ nav {
     max-width: 1100px;
     display: block;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 20px 0;
     background: #f1e7da;
 }
 
@@ -123,7 +128,7 @@ nav {
 }
 
 .mainContent img {
-    border: 1px solid #423D37;
+    border: 1px solid #3f3b35;
 }
 
 .pagePhoto {
@@ -139,7 +144,7 @@ nav {
 http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing */
 .responsiveIframe {
     position: relative;
-    padding-bottom: 65%;
+    padding-bottom: 60%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
@@ -154,7 +159,7 @@ http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-we
 }
 
 #googleMap {
-
+    border: 3px solid #3f3b35;
 }
 
 
@@ -163,25 +168,36 @@ footer {
     margin: 0;
     width: 100%;
     min-height: 100px;
-    background: #423D37;
+    background: #3f3b35;
 }
 
+/* Footer content centered on page and same width as overall page */
 #footerContent {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
 }
+
+#footerLeft, #footerCenter, #footerRight {
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* Left footer contains nav links */
 #footerLeft {
     width: 39%;
     min-width: 200px;
-    display: inline-block;
+}
 
+#footerLeft ul{
+    margin: 0;
+    padding: 0;
 }
 
 #footerLeft li{
     display: inline-block;
     list-style-type: none;
-    padding: 2% 5%;
+    padding: 2% 7%;
 }
 
 #footerLeft a{
@@ -190,14 +206,18 @@ footer {
 
 #footerCenter {
     width: 19%;
-    min-width: 60px;
+    min-width: 80px;
+}
+
+#footerCenter img {
     display: inline-block;
+    padding: 0 8% 8% 8%;
+    max-width: 45%;
 }
 
 #footerRight {
     width: 39%;
-    min-width: 200px;
-    display: inline-block;
+    min-width: 170px;
 }
 
 #footerRight img {
@@ -244,10 +264,40 @@ footer {
 [class*='col-'] img {
     max-width: 100%;
 }
+/* END GRID SYSTEM */
 
 .events {
     background: #dec0ab;
     padding: 10px;
+}
+
+.contactUs {
+    background: #e8d7c2;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT FORM */
+
+.contactForm label, input, textarea {
+    margin-bottom: 1.3em;
+}
+.contactForm label {
+    clear: left;
+    float: left;
+    width: 20%;
+}
+
+.contactForm input, textarea {
+    padding: 5px;
+    width: 78%;
+}
+
+input.submit {
+    clear: left;
+    float: right;
+    width: 30%;
+    height: 50px;
 }
 
 /* Break point for smaller screens. */
@@ -259,6 +309,13 @@ footer {
 
     #navMenu li a {
     padding: 11px 10px;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    body{
+        background-image: url(../images/bgpattern2.png); /* bg adopted from subtlepatterns.com */
     }
 }
 
@@ -350,7 +407,7 @@ footer {
         position: relative;
         z-index: 2;
         width: 100%;
-        background: #423D37;
+        background: #3f3b35;
     }
 
     #navMenu.expanded ul li a {
