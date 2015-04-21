@@ -20,6 +20,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: PT Serif, Times, sans-serif;
     font-weight: 700;
 }
+
+a {
+    color: red;
+}
+
+a:visited {
+    color: maroon;
+}
 .clearfix:after {
    content: " ";
    visibility: hidden;
@@ -127,6 +135,29 @@ nav {
 }
 
 
+/* responsiveIframe CSS adapted from code at 
+http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing */
+.responsiveIframe {
+    position: relative;
+    padding-bottom: 65%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsiveIframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#googleMap {
+
+}
+
+
 /* FOOTER */
 footer {
     margin: 0;
@@ -190,7 +221,7 @@ footer {
 }
 
 .col-1-2 {
-    width: 50%;
+    width: 49%;
 }
 
 .col-1-1 {
@@ -210,6 +241,10 @@ footer {
   padding-right: 0;
 }
 
+[class*='col-'] img {
+    max-width: 100%;
+}
+
 .events {
     background: #dec0ab;
     padding: 10px;
@@ -217,7 +252,7 @@ footer {
 
 /* Break point for smaller screens. */
 /* Makes nav menu smaller. Reduces to one column layout */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 959px) {
     [class*='col-'] {
         width: 100%;
     }
@@ -228,8 +263,8 @@ footer {
 }
 
 /* Break point for phone sized screens */
-/* Replaces nav menu with hamburger drop down. Reduces padding in other places */
-@media screen and (max-width: 639px) {
+/* Makes menu two rows to fit. Reduces padding in other places */
+@media screen and (max-width: 767px) {
 
     #navBar {
         height: 100px;
@@ -282,7 +317,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 459px) {
+/* Transitions to hamburger drop down menu */
+@media screen and (max-width: 550px) {
     #menuButton {
         color: white;
         display: block;
