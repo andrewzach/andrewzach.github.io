@@ -32,6 +32,7 @@ a {
 a:visited {
     color: maroon;
 }
+/* Fixes 0 height divs with floated elements */
 .clearfix:after {
    content: " ";
    visibility: hidden;
@@ -39,6 +40,13 @@ a:visited {
    height: 0;
    clear: both;
 }
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+/* NAVIGATION BAR AND MENU */
 
 nav {
     display:block;
@@ -52,6 +60,8 @@ nav {
     width: 100%;
     background: #3f3b35;
     margin-top: 50px;
+    position: relative;
+    z-index: 3; /* Ensures nav bar is visible, important for IE 8 */
 }
 
 #stamplogo {
@@ -88,7 +98,7 @@ nav {
     display: inline-block;
     font-size: 24px;
     color: #D8C7B2;
-    padding: 10px 20px;
+    padding: 9px 20px;
     text-decoration: none;
 }
 
@@ -112,6 +122,9 @@ nav {
 #menuButton {
     display: none;
 }
+
+
+/* MAIN CONTENT AREA */
 
 .mainContentArea {
     max-width: 1100px;
@@ -139,6 +152,8 @@ nav {
 }
 
 
+/* CONTACT PAGE */
+
 /* responsiveIframe CSS adapted from code at 
 http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing */
 .responsiveIframe {
@@ -161,6 +176,42 @@ http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-we
     border: 3px solid #3f3b35;
 }
 
+/* CONTACT FORM */
+
+.contactForm label, input, textarea {
+    margin-bottom: 0.4em;
+}
+.contactForm label {
+    clear: left;
+    float: left;
+    width: 100%;
+}
+
+.contactForm input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 2px;
+
+}
+
+button#submit {
+    clear: left;
+    float: right;
+    width: 40%;
+    height: 50px;
+    background: #d14836;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    background-image:linear-gradient(center top, #dd4b39, #d14836);
+    background-image:-moz-linear-gradient(center top, #dd4b39, #d14836);
+    background-image:-webkit-linear-gradient(center top, #dd4b39, #d14836);
+}
+
+button#submit:hover {
+    background: #da4d3b;
+}
 
 /* FOOTER */
 footer {
@@ -223,11 +274,6 @@ footer {
     max-width: 100%;
 }
 
-.centered {
-    display: block;
-    margin: 0 auto;
-}
-
 /* GRID SYSTEM */
 /* Adapted from code at https://css-tricks.com/dont-overthink-it-grids/ */
 
@@ -276,42 +322,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/* CONTACT FORM */
 
-.contactForm label, input, textarea {
-    margin-bottom: 0.4em;
-}
-.contactForm label {
-    clear: left;
-    float: left;
-    width: 100%;
-}
-
-.contactForm input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 2px;
-
-}
-
-button#submit {
-    clear: left;
-    float: right;
-    width: 40%;
-    height: 50px;
-    background: #d14836;
-    color: white;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    background-image:linear-gradient(center top, #dd4b39, #d14836);
-    background-image:-moz-linear-gradient(center top, #dd4b39, #d14836);
-    background-image:-webkit-linear-gradient(center top, #dd4b39, #d14836);
-}
-
-button#submit:hover {
-    background: #da4d3b;
-}
 
 /* Break point for smaller screens. */
 /* Makes nav menu smaller. Reduces to one column layout */
@@ -321,7 +332,7 @@ button#submit:hover {
     }
 
     #navMenu li a {
-    padding: 11px 10px;
+    padding: 9px 10px;
     }
 }
 
