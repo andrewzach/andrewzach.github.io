@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: red;
+    color: #d14836;
 }
 
 a:visited {
@@ -265,6 +265,13 @@ footer {
     max-width: 45%;
 }
 
+/* Make images rotate slightly when you mouse over them */
+#footerCenter img:hover {
+    -ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    transform: rotate(5deg);
+}
+
 #footerRight {
     width: 39%;
     min-width: 170px;
@@ -323,6 +330,16 @@ footer {
 }
 
 
+.spin:hover {
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
 
 /* Break point for smaller screens. */
 /* Makes nav menu smaller. Reduces to one column layout */
@@ -375,7 +392,7 @@ footer {
         width: 30%;
     } 
     #navMenu li a {
-        padding: 11px 20px;
+        padding: 9px 20px;
     }
 
     /* Reduce padding on sides */
