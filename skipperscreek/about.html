@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="keywords" content="vineyard wine powhatan virginia winemaking winery tasting">
+    <title>Skippers Creek Vineyard - About Us</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skippers.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato|PT+Serif:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav>
+        <div id="navBar">
+            <div id="topNav" class="clearfix">
+                <div id="stamplogo">
+                    <a href="index.html"><img src="images/skipperslogo150.png" alt="logo" class="spin"></a><!-- Just a little easter egg -->
+                </div>
+                <div id="navMenu" class="">
+                    <a id="menuButton" onclick="toggleNavMenu()" href="#"><img src="images/sandwichmenu.png" alt="menu"><br>Menu</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="wines.html">Wines</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mainContentArea">
+        <img class="pagePhoto" alt="page photo" src="images/grape-banner-4.jpg">
+        <div class="mainContent">
+            <div class="col-1-1">
+                <h1>About Us</h1>
+                <!-- Note: Copy text below is pulled straight from their website. It probably
+                needs to be updated... -->
+                <h2>The Making of the Wine</h2>
+                <p>We decided to plant viniferous grapes. In 2011 we had our first harvest of chardonnay and viognier. With the help of family and friends, we were able to get the harvest in before the storms set in. Winemaker Charles Zacharias did whole cluster press and fermented in steel with added French oak. We have since harvested cabernet franc and merlot, and these have been aged in oak barrels and blended in a Bordeaux style. This year we added petit verdot and malbec. We are currently working with a barrel fermented chardonnay. In 2015 we will be introducing a sweet white merlot “blonde.” Please come visit us to taste and enjoy.</p>
+
+                <h2>History</h2>
+                <p>Skippers Creek Vineyard is located on property owned by Debbie’s family for over 75 years. Growing up, dairy and tobacco farming filled her day with many hours of hard work. Today, sitting about 300 feet above sea level, the pastures thrive with five acres of viniferous vines overlooking the meadow and pond below. Our first planting happened in 2009 with additional plantings in 2010 and 2012, expanding the different grape varieties.  We have always had a love for wine and can now see the fruits of our labor. The hard work remains hard but rewarding. The vines are flourishing and the wine is aging.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footerContent">
+            <div id="footerLeft">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="wines.html">Wines</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footerCenter">
+                <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780"><img src="images/FBlogo58.png" alt="facebook"></a>
+                <a href="https://twitter.com/skipperscreek"><img src="images/Twitter_logo_blue.png" alt="twitter"></a>
+            </div>
+            <div id="footerRight">
+                <img src="images/skipperscreek-footerlogo.png" alt="logo" class="centered">
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+    // Toggles the navigation menu on small screens
+    // Written by me
+    function toggleNavMenu() {
+        navElem = document.getElementById("navMenu");
+        
+        //switches the class of navMenu div between "expanded" and blank.
+        if (navElem.className == "expanded") {
+            navElem.className = ""
+        }
+        else {
+            navElem.className = "expanded"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="keywords" content="vineyard wine powhatan virginia winemaking winery tasting">
+    <title>Skippers Creek Vineyard - Events</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skippers.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato|PT+Serif:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav>
+        <div id="navBar">
+            <div id="topNav" class="clearfix">
+                <div id="stamplogo">
+                    <a href="index.html"><img src="images/skipperslogo150.png" alt="logo"></a>
+                </div>
+                <div id="navMenu" class="">
+                    <a id="menuButton" onclick="toggleNavMenu()" href="#"><img src="images/sandwichmenu.png" alt="menu"><br>Menu</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="wines.html">Wines</a></li>
+                        <li><a href="events.html" class="active">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mainContentArea">
+        <!-- Note: I created the  banner,  but the photos in it are not mine -->
+        <img class="pagePhoto" alt="page photo" src="images/eventsbanner2.jpg">
+        <div class="mainContent">
+            <div class="col-1-1">
+                <h1>Upcoming Events</h1>
+                <p>For the latest news on upcoming events at Skippers Creek, please <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780">view our Facebook page.</a>
+            </div>
+            <div class="col-1-1">
+                <a name="sep20">
+                <h2>September 20, 2014</h2>
+                <!-- Note: Image not created by me -->
+                <a href="images/event920.jpg"><img src="images/event920.jpg" alt="event 9/20"></a>
+            </div>
+            <div class="col-1-1">
+                <a name="oct18">
+                <h2>October 18, 2014</h2>
+                <!-- Note: Image not created by me -->
+                <a href="images/event1018.jpg"><img src="images/event1018.jpg" alt="event 10/18"></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footerContent">
+            <div id="footerLeft">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="wines.html">Wines</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footerCenter">
+                <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780"><img src="images/FBlogo58.png" alt="facebook"></a>
+                <a href="https://twitter.com/skipperscreek"><img src="images/Twitter_logo_blue.png" alt="twitter"></a>
+            </div>
+            <div id="footerRight">
+                <img src="images/skipperscreek-footerlogo.png" alt="logo" class="centered">
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+    // Toggles the navigation menu on small screens
+    // Written by me
+    function toggleNavMenu() {
+        navElem = document.getElementById("navMenu");
+        
+        //switches the class of navMenu div between "expanded" and blank.
+        if (navElem.className == "expanded") {
+            navElem.className = ""
+        }
+        else {
+            navElem.className = "expanded"
+        }
+    }
+    </script>
+</body>
+</html>

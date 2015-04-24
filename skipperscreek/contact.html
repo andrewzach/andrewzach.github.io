@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="keywords" content="vineyard wine powhatan virginia winemaking winery tasting">
+    <title>Skippers Creek Vineyard - Contact Us</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skippers.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato|PT+Serif:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav>
+        <div id="navBar">
+            <div id="topNav" class="clearfix">
+                <div id="stamplogo">
+                    <a href="index.html"><img src="images/skipperslogo150.png" alt="logo"></a>
+                </div>
+                <div id="navMenu" class="">
+                    <a id="menuButton" onclick="toggleNavMenu()" href="#"><img src="images/sandwichmenu.png" alt="menu"><br>Menu</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="wines.html">Wines</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="mainContentArea">
+        <img class="pagePhoto" alt="page photo" src="images/contact_banner.jpg">
+        <div class="mainContent">
+            <div class="col-1-2">
+                <h2>Contact Information</h2>
+                <p><b>Address:</b> <br>
+                Skippers Creek Vineyard <br>
+                965 Rocky Ford Rd <br>
+                Powhatan, VA 23139</p>
+
+                <p><b>Directions:</b> Off of Rocky Ford Road, Turn onto River Estates Road, Go straight and continue straight on dirt road for one mile, take right at end of road and then first right.</p>
+
+                <p><b>Email:</b> <a href="mailto:contact@skipperscreekvineyard.com">contact@skipperscreekvineyard.com</a></p>
+
+                <p><b>Phone Number:</b> 804-598-7291</p>
+
+                <p><a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780">Facebook page</a>
+            </div>
+            <div class="col-1-2 contactUs">
+                <h2>Send Us A Message</h2>
+                <form class="contactForm" method="get" action="thankyou.html">
+                    <label>Name<input type="text" name="name" tabindex="1" required></label>
+                    <label>Email<input type="email" name="email" tabindex="2" required></label>
+                    <label>Message<textarea name="message" tabindex="3" required rows="5"></textarea></label><br>
+                    <button id="submit" type="submit" name="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="col-1-1">
+                <div class="responsiveIframe">
+                    <iframe id="googleMap" width="900" height="600" frameborder="0" scrolling="no" src="http://maps.google.com/maps?f=q&hl=en&z=13&iwloc=A&output=embed&ie=UTF8&t=m&q=Skippers+Creek+Vineyard+Powhatan,+VA+23139&near=965+Rocky+Ford+Rd,+Powhatan,+Virginia+23139&ll=37.471214,-77.883196&sll=37.471214,-77.883196&spn=0.02466,0.084972">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footerContent">
+            <div id="footerLeft">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="wines.html">Wines</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footerCenter">
+                <a href="https://www.facebook.com/pages/Skippers-Creek-Vineyard/212517205548780"><img src="images/FBlogo58.png" alt="facebook"></a>
+                <a href="https://twitter.com/skipperscreek"><img src="images/Twitter_logo_blue.png" alt="twitter"></a>
+            </div>
+            <div id="footerRight">
+                <img src="images/skipperscreek-footerlogo.png" alt="logo" class="centered">
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+    // Toggles the navigation menu on small screens
+    // Written by me
+    function toggleNavMenu() {
+        navElem = document.getElementById("navMenu");
+        
+        //switches the class of navMenu div between "expanded" and blank.
+        if (navElem.className == "expanded") {
+            navElem.className = ""
+        }
+        else {
+            navElem.className = "expanded"
+        }
+    }
+
+    /* The code below is not written by me. It is taken from:
+    http://www.onextrapixel.com/2013/01/18/creating-an-html5-responsive-ready-contact-form-with-javascript-detection/ */
+
+    /* This code makes the "Send Message" on the contact for change text upon being clicked to let the user know it is working. */
+    var send = document.getElementById('submit');
+    if(send) {
+            send.onclick = function () {
+                    this.innerHTML = '...Sending';
+            }
+    }
+    </script>
+</body>
+</html>
